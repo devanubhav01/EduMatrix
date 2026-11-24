@@ -8,6 +8,9 @@ const searchForm = document.getElementById("search-form");
 
 const searchInput = document.getElementById("search-input");
 
+const bookRows = document.querySelectorAll(
+    ".book-catalog-section tbody tr"
+);
 
 searchForm.addEventListener("submit", function (event) {
 
