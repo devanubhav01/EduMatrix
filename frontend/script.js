@@ -18,6 +18,26 @@ searchForm.addEventListener("submit", function (event) {
 
     const searchValue = searchInput.value.toLowerCase().trim();
 
-    console.log("Searching for:", searchValue);
+    for (let i = 0; i < bookRows.length; i++) {
+
+        const bookDetails = bookRows[i].textContent.toLowerCase();
+
+
+        // MATCH SEARCH TEXT
+
+        if (bookDetails.includes(searchValue)) {
+
+            bookRows[i].style.display = "";
+
+        }
+
+        else {
+
+            bookRows[i].style.display = "none";
+
+        }
+
+    }
+
 
 });
