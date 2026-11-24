@@ -1,29 +1,32 @@
-console.log("EduMatrix JavaScript Connected Successfully!");
+// =========================
+// STEP 2, 3, 4
+// BOOK SEARCH SYSTEM
+// =========================
 
-// =========================
-// STEP 2 - BOOK SEARCH
-// =========================
+
+// SEARCH ELEMENTS
 
 const searchForm = document.getElementById("search-form");
 
 const searchInput = document.getElementById("search-input");
 
+
+// BOOK CATALOG ROWS
+
 const bookRows = document.querySelectorAll(
     ".book-catalog-section tbody tr"
 );
 
-searchForm.addEventListener("submit", function (event) {
 
-    event.preventDefault();
+// BOOK SEARCH FUNCTION
+
+function searchBooks() {
 
     const searchValue = searchInput.value.toLowerCase().trim();
 
     for (let i = 0; i < bookRows.length; i++) {
 
         const bookDetails = bookRows[i].textContent.toLowerCase();
-
-
-        // MATCH SEARCH TEXT
 
         if (bookDetails.includes(searchValue)) {
 
@@ -39,5 +42,24 @@ searchForm.addEventListener("submit", function (event) {
 
     }
 
+}
+
+
+// SEARCH BUTTON
+
+searchForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    searchBooks();
+
+});
+
+
+// LIVE SEARCH
+
+searchInput.addEventListener("input", function () {
+
+    searchBooks();
 
 });
