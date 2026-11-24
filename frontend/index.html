@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EduMatrix - Ebook Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero-section">
+
+        <h1 id="main-heading">Welcome to EduMatrix</h1>
+
+        <p>
+            Your digital library for learning, exploring,
+            and discovering knowledge.
+        </p>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Books</a>
+            <a href="#">Categories</a>
+            <a href="#">Signup</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="library-section">
+
+            <h2>Explore Our Library</h2>
+            <video controls width="500">
+
+                <source src="videos/launchvehicle.mp4" type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+            <p>
+                Access a collection of ebooks covering programming,
+                technology, business, science, and personal development.
+            </p>
+
+        <form id="search-form">
+        
+            <input type="search" id="search-input" name="search" placeholder="Search books...">
+        
+            <button type="submit">Search</button>
+        
+        </form>
+
+        </section>
+
+
+        <section class="featured-book">
+
+            <h2>Featured Book</h2>
+
+            <article>
+
+                <h3>Java Programming</h3>
+
+                <p>
+                    Learn Java programming from fundamentals
+                    to advanced concepts with our ebook collection.
+                </p>
+
+                <h3>Book Audio Preview</h3>
+
+                <audio controls>
+                    <source src="audio/harry_potter_theme.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+
+                <img src="images/java-book.jpg" alt="Java Programming Book Cover" width="147.5" height="207">
+
+            </article>
+
+        </section>
+
+
+        <section class="categories-section">
+
+            <h2>Explore Categories</h2>
+
+            <ul>
+
+                <li>
+                    Programming
+
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Technology
+
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Web Development</li>
+                        <li>Cybersecurity</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Science
+
+                    <ul>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Biology</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Business
+
+                    <ul>
+                        <li>Entrepreneurship</li>
+                        <li>Finance</li>
+                        <li>Management</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="book-catalog-section">
+
+            <h2>Available Books Catalog</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Duration</th>
+                        <th>Price</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Java Programming</td>
+                        <td>James Gosling</td>
+                        <td>Programming</td>
+                        <td>15 Days</td>
+                        <td>₹99</td>
+                    </tr>
+
+                    <tr>
+                        <td>Python Basics</td>
+                        <td>Guido van Rossum</td>
+                        <td>Programming</td>
+                        <td>15 Days</td>
+                        <td>₹79</td>
+                    </tr>
+
+                    <tr>
+                        <td>Web Development</td>
+                        <td>Tim Berners-Lee</td>
+                        <td>Technology</td>
+                        <td>30 Days</td>
+                        <td>₹149</td>
+                    </tr>
+
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td>Andrew Ng</td>
+                        <td>Technology</td>
+                        <td>30 Days</td>
+                        <td>₹199</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="reading-plan-section">
+
+            <h2>Choose Your Reading Plan</h2>
+
+            <form>
+
+                <p>Select your reading duration:</p>
+
+                <div>
+                    <input type="radio" id="plan-15" name="duration" value="15">
+
+                    <label for="plan-15">15 Days</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="plan-30" name="duration" value="30">
+
+                    <label for="plan-30">30 Days</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="plan-60" name="duration" value="60">
+
+                    <label for="plan-60">60 Days</label>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section class="workflow-section">
+
+            <h2>How It Works</h2>
+
+            <ol>
+                <li>Create your account</li>
+                <li>Explore available ebooks</li>
+                <li>Select your preferred book</li>
+                <li>Choose your reading duration</li>
+                <li>Complete the payment</li>
+                <li>Start reading your ebook</li>
+            </ol>
+
+        </section>
+
+
+        <section class="signup-section">
+
+            <h2>Create Your Account</h2>
+
+            <form>
+
+                <div>
+                    <label for="name">Full Name:</label>
+
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="email">Email Address:</label>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="password">Password:</label>
+
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+
+                    <label for="terms">
+                        I agree to the Terms and Conditions
+                    </label>
+                </div>
+
+                <br>
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="feedback-section">
+
+            <h2>Share Your Feedback</h2>
+
+            <form>
+
+                <label for="feedback">Your Feedback:</label>
+
+                <br><br>
+
+                <textarea id="feedback" name="feedback" rows="5" cols="40"
+                    placeholder="Write your feedback here..."></textarea>
+
+                <br><br>
+
+                <button type="submit">Submit Feedback</button>
+
+            </form>
+
+        </section>
+
+
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+
+                <summary>What is EduMatrix?</summary>
+
+                <p>
+                    EduMatrix is an online ebook library
+                    where users can access ebooks.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>How long can I access a book?</summary>
+
+                <p>
+                    Users can choose a reading duration
+                    such as 15 days or other available plans.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>Can I renew my book?</summary>
+
+                <p>
+                    Yes, users will be able to renew their
+                    reading plans when renewal is available.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>Do I need to pay to issue a book?</summary>
+
+                <p>
+                    Yes, books will have paid reading plans.
+                </p>
+
+            </details>
+
+        </section>
+
+    </main>
+
+    <button class="help-button">Help</button>
+
+    <footer>
+
+        <p>© 2026 EduMatrix</p>
+
+        <p>All rights reserved.</p>
+
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            GitHub
+        </a>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

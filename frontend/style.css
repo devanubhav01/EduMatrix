@@ -1,0 +1,1223 @@
+/* =========================================================
+   EDUMATRIX - EBOOK LIBRARY
+   PURE CSS | RESPONSIVE | MODERN UI
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #8b5cf6;
+
+    --background: #f5f7ff;
+    --surface: #ffffff;
+
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+
+    --border: #e2e8f0;
+
+    --success: #16a34a;
+    --warning: #f59e0b;
+
+    --radius: 16px;
+    --radius-small: 10px;
+
+    --shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06);
+
+    --shadow-hover:
+        0 18px 40px rgba(99, 102, 241, 0.13);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. BODY
+========================================================= */
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--text-primary);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   4. HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3 {
+
+    color: var(--text-primary);
+
+    line-height: 1.3;
+
+}
+
+
+h1 {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+
+h2 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+
+h3 {
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   5. PARAGRAPHS
+========================================================= */
+
+p {
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================================================
+   6. LINKS
+========================================================= */
+
+a {
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+a:hover {
+
+    color: var(--primary-dark);
+
+}
+
+
+/* =========================================================
+   7. HEADER
+========================================================= */
+
+header {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #312e81,
+            #4f46e5
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 5px 2px;
+
+    margin-bottom: 30px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow:
+
+        0 8px 25px rgba(15, 23, 42, 0.15);
+
+}
+
+
+header h1 {
+
+    color: white;
+
+    font-size: 30px;
+
+    
+    font-style: italic;
+
+}
+
+
+header p {
+
+    color: #c7d2fe;
+
+    font-size: 12px;
+
+    max-width: 650px;
+
+    margin: 0 auto 8px;
+
+}
+
+
+/* =========================================================
+   8. NAVIGATION
+========================================================= */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+
+}
+
+
+nav a {
+
+    display: inline-block;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 10px;
+
+    background-color: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition: var(--transition);
+
+}
+
+
+nav a:hover {
+
+    color: white;
+
+    background-color: rgba(255, 255, 255, 0.22);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   9. MAIN
+========================================================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================================
+   10. ALL SECTIONS
+========================================================= */
+
+section {
+
+    background-color: var(--surface);
+
+    padding: 30px;
+
+    margin-bottom: 28px;
+
+    border-radius: var(--radius);
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+
+section:hover {
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+
+/* =========================================================
+   11. LIBRARY SECTION
+========================================================= */
+
+.library-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef2ff
+        );
+
+}
+
+
+.library-section h2 {
+
+    color: var(--primary-dark);
+
+}
+
+
+.library-section video {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 25px auto;
+
+    border-radius: 14px;
+
+}
+
+
+.library-section form {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================================================
+   12. FEATURED BOOK
+========================================================= */
+
+.featured-book {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f5f3ff
+        );
+
+    position: relative;
+
+}
+
+
+.featured-book article {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.featured-book img {
+
+    display: block;
+
+    max-width: 100%;
+
+    width: 200px;
+
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    box-shadow:
+
+        0 10px 25px rgba(15, 23, 42, 0.15);
+
+}
+
+
+.featured-book audio {
+
+    width: 100%;
+
+    max-width: 450px;
+
+}
+
+
+/* =========================================================
+   13. CATEGORIES
+========================================================= */
+
+.categories-section {
+
+    background-color: white;
+
+}
+
+
+.categories-section > ul {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    list-style: none;
+
+}
+
+
+.categories-section > ul > li {
+
+    background-color: #f8fafc;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+
+    font-weight: 700;
+
+    transition: var(--transition);
+
+}
+
+
+.categories-section > ul > li:hover {
+
+    background-color: #eef2ff;
+
+    border-color: #c7d2fe;
+
+    transform: translateY(-4px);
+
+}
+
+
+.categories-section ul ul {
+
+    margin-top: 12px;
+
+    padding-left: 20px;
+
+}
+
+
+.categories-section ul ul li {
+
+    font-weight: 400;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 6px;
+
+}
+
+
+/* =========================================================
+   14. BOOK CATALOG
+========================================================= */
+
+.book-catalog-section {
+
+    overflow-x: auto;
+
+}
+
+
+.book-catalog-section table {
+
+    width: 100%;
+
+    min-width: 600px;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+}
+
+
+.book-catalog-section th {
+
+    background-color: var(--primary-dark);
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+}
+
+
+.book-catalog-section td {
+
+    padding: 14px 15px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+}
+
+
+.book-catalog-section tbody tr:nth-child(even) {
+
+    background-color: #f8fafc;
+
+}
+
+
+.book-catalog-section tbody tr:hover {
+
+    background-color: #eef2ff;
+
+}
+
+
+/* =========================================================
+   15. READING PLANS
+========================================================= */
+
+.reading-plan-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f5f3ff
+        );
+
+}
+
+
+.reading-plan-section form {
+
+    margin-top: 20px;
+
+}
+
+
+.reading-plan-section form > div {
+
+    padding: 12px 15px;
+
+    margin-bottom: 10px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    transition: var(--transition);
+
+}
+
+
+.reading-plan-section form > div:hover {
+
+    background-color: #eef2ff;
+
+}
+
+
+input[type="radio"] {
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   16. WORKFLOW
+========================================================= */
+
+.workflow-section {
+
+    background-color: white;
+
+}
+
+
+.workflow-section ol {
+
+    padding-left: 25px;
+
+}
+
+
+.workflow-section li {
+
+    padding: 10px 0;
+
+    color: var(--text-secondary);
+
+}
+
+
+.workflow-section li::marker {
+
+    color: var(--primary);
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   17. SIGNUP SECTION
+========================================================= */
+
+.signup-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef2ff
+        );
+
+}
+
+
+.signup-section form > div {
+
+    margin-bottom: 15px;
+
+}
+
+
+.signup-section label {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+}
+
+
+/* =========================================================
+   18. FEEDBACK
+========================================================= */
+
+.feedback-section {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fff7ed
+        );
+
+}
+
+
+.feedback-section label {
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   19. FAQ
+========================================================= */
+
+.faq-section {
+
+    background-color: white;
+
+}
+
+
+.faq-section details {
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background-color: #f8fafc;
+
+    transition: var(--transition);
+
+}
+
+
+.faq-section details:hover {
+
+    border-color: #c7d2fe;
+
+    background-color: #eef2ff;
+
+}
+
+
+.faq-section summary {
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    color: var(--text-primary);
+
+}
+
+
+.faq-section details p {
+
+    margin-top: 12px;
+
+}
+
+
+/* =========================================================
+   20. FORM ELEMENTS
+========================================================= */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: var(--text-primary);
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+    transition: var(--transition);
+
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+input:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow:
+
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+
+}
+
+
+/* =========================================================
+   21. BUTTONS
+========================================================= */
+
+button {
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: var(--primary);
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+
+button:hover {
+
+    background-color: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+button:active {
+
+    transform: scale(0.97);
+
+}
+
+
+/* =========================================================
+   22. SEARCH BUTTON
+========================================================= */
+
+.library-section button {
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   23. SIGNUP BUTTON
+========================================================= */
+
+.signup-section button:hover {
+
+    background-color: #4338ca;
+
+}
+
+
+/* =========================================================
+   24. FEEDBACK BUTTON
+========================================================= */
+
+.feedback-section button:hover {
+
+    background-color: #ea580c;
+
+}
+
+
+/* =========================================================
+   25. HELP BUTTON
+========================================================= */
+
+.help-button {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    z-index: 1000;
+
+    border-radius: 50px;
+
+    padding: 15px 22px;
+
+    box-shadow:
+
+        0 8px 25px rgba(99, 102, 241, 0.3);
+
+}
+
+
+.help-button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   26. FOOTER
+========================================================= */
+
+footer {
+
+    background-color: #0f172a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    margin-top: 40px;
+
+}
+
+
+footer p {
+
+    color: #cbd5e1;
+
+}
+
+
+footer a {
+
+    color: #a5b4fc;
+
+    font-weight: 600;
+
+}
+
+
+footer a:hover {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   27. RESPONSIVE DESIGN - TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+
+        width: 94%;
+
+    }
+
+
+    header {
+
+        padding: 35px 20px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 30px;
+        
+
+    }
+
+
+    section {
+
+        padding: 25px;
+
+    }
+
+}
+
+
+/* =========================================================
+   28. RESPONSIVE DESIGN - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    /* BODY */
+
+    body {
+
+        font-size: 15px;
+
+    }
+
+
+    /* HEADINGS */
+
+    h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    h3 {
+
+        font-size: 19px;
+
+    }
+
+
+    /* HEADER */
+
+    header {
+
+        padding: 5px 2px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 30px;
+        
+
+    }
+
+
+    header p {
+
+        font-size: 12px;
+
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+
+        gap: 8px;
+
+    }
+
+
+    nav a {
+
+        padding: 8px 12px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* MAIN */
+
+    main {
+
+        width: 95%;
+
+    }
+
+
+    /* SECTIONS */
+
+    section {
+
+        padding: 18px;
+
+        margin-bottom: 18px;
+
+        border-radius: 12px;
+
+    }
+
+
+    /* CATEGORIES */
+
+    .categories-section > ul {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* SEARCH FORM */
+
+    .library-section form {
+
+        flex-direction: column;
+
+    }
+
+
+    .library-section button {
+
+        width: 100%;
+
+    }
+
+
+    /* FEATURED BOOK */
+
+    .featured-book img {
+
+        width: 170px;
+
+    }
+
+
+    /* TABLE */
+
+    .book-catalog-section table {
+
+        min-width: 550px;
+
+    }
+
+
+    /* INPUTS */
+
+    input,
+    textarea {
+
+        font-size: 16px;
+
+    }
+
+
+    /* BUTTONS */
+
+    button {
+
+        width: 100%;
+
+    }
+
+
+    /* HELP BUTTON */
+
+    .help-button {
+
+        width: auto;
+
+        bottom: 15px;
+
+        right: 15px;
+
+        padding: 13px 18px;
+
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding: 25px 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   29. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
