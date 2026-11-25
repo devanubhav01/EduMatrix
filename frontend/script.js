@@ -29,7 +29,7 @@ function searchBooks() {
 
     const searchValue = searchInput.value.toLowerCase().trim();
 
-   // let foundBooks = 0;
+    let foundBooks = 0;
 
 
     for (let i = 0; i < bookRows.length; i++) {
