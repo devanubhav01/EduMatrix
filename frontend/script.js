@@ -46,8 +46,8 @@ function searchBooks() {
         }
 
         else {
-
-            bookRows[i].style.display = "none";
+            noResults.style.display = "block"
+           // bookRows[i].style.display = "none";
 
         }
 
