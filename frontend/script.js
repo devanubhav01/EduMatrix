@@ -58,7 +58,7 @@ function searchBooks() {
 
     if (foundBooks === 0) {
 
-        noResults.style.display = "";
+        noResults.style.display = "block";
 
     }
 
