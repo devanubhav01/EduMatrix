@@ -130,35 +130,35 @@ const signupMessage = document.getElementById("signup-message");
 
 // SIGNUP FORM SUBMISSION
 
-// signupForm.addEventListener("submit", function (event) {
+signupForm.addEventListener("submit", function (event) {
 
-//     event.preventDefault();
-
-
-//     // GET USER DETAILS
-
-//     const userName = document.getElementById("name").value.trim();
-
-//     const userEmail = document.getElementById("email").value.trim();
-
-//     const userPassword = document.getElementById("password").value;
+    event.preventDefault();
 
 
-//     // DISPLAY SIGNUP MESSAGE
+    // GET USER DETAILS
 
-//     signupMessage.textContent =
-//         `Welcome ${userName}! Your signup form has been submitted.`;
+    const userName = document.getElementById("name").value.trim();
 
+    const userEmail = document.getElementById("email").value.trim();
 
-//     console.log("User Name:", userName);
-
-//     console.log("User Email:", userEmail);
-
-//     console.log("Password entered:", userPassword);
+    const userPassword = document.getElementById("password").value;
 
 
-//     // RESET FORM
+    // DISPLAY SIGNUP MESSAGE
 
-//     signupForm.reset();
+    signupMessage.textContent =
+        `Welcome ${userName}! Your signup form has been submitted.`;
 
-// });
+
+    console.log("User Name:", userName);
+
+    console.log("User Email:", userEmail);
+
+    console.log("Password entered:", userPassword);
+
+
+    // RESET FORM
+
+    signupForm.reset();
+
+});
