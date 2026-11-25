@@ -89,3 +89,10 @@
 //     searchBooks();
 
 // });
+
+
+searchForm.addEventListener("submit", function (event) {
+
+    console.log(event);
+
+});
