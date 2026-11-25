@@ -90,4 +90,28 @@ searchInput.addEventListener("input", function () {
 
 });
 
+const readingPlanForm = document.getElementById("reading-plan-form");
 
+const selectedPlanMessage = document.getElementById(
+    "selected-plan-message"
+);
+
+
+// READING PLAN SELECTION
+
+readingPlanForm.addEventListener("change", function () {
+
+    const selectedPlan = readingPlanForm.querySelector(
+        'input[name="duration"]:checked'
+    );
+
+    if (selectedPlan) {
+
+        const duration = selectedPlan.value;
+
+        selectedPlanMessage.textContent =
+            `You have selected the ${duration} Days Reading Plan.`;
+
+    }
+
+});
