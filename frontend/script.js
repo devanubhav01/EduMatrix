@@ -39,7 +39,7 @@ function searchBooks() {
 
         if (bookDetails.includes(searchValue)) {
 
-            bookRows[i].style.display = "none";
+            bookRows[i].style.display = "block";
 
             foundBooks++;
 
