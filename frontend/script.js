@@ -1,98 +1,93 @@
-// // =========================
-// // STEP 2-5
-// // COMPLETE BOOK SEARCH SYSTEM
-// // =========================
+// =========================
+// STEP 2-5
+// COMPLETE BOOK SEARCH SYSTEM
+// =========================
 
 
-// // SEARCH ELEMENTS
+// SEARCH ELEMENTS
 
-// const searchForm = document.getElementById("search-form");
+const searchForm = document.getElementById("search-form");
 
-// const searchInput = document.getElementById("search-input");
-
-
-// // BOOK CATALOG
-
-// const bookRows = document.querySelectorAll(
-//     ".book-catalog-section tbody tr"
-// );
+const searchInput = document.getElementById("search-input");
 
 
-// // NO RESULTS MESSAGE
+// BOOK CATALOG
 
-// const noResults = document.getElementById("no-results");
-
-
-// // BOOK SEARCH FUNCTION
-
-// function searchBooks() {
-
-//     const searchValue = searchInput.value.toLowerCase().trim();
-
-//     let foundBooks = 0;
+const bookRows = document.querySelectorAll(
+    ".book-catalog-section tbody tr"
+);
 
 
-//     for (let i = 0; i < bookRows.length; i++) {
+// NO RESULTS MESSAGE
 
-//         const bookDetails = bookRows[i].textContent.toLowerCase();
-
-
-//         if (bookDetails.includes(searchValue)) {
-
-//             bookRows[i].style.display = "";
-
-//             foundBooks++;
-
-//         }
-
-//         else {
-
-//             bookRows[i].style.display = "none";
-
-//         }
-
-//     }
+const noResults = document.getElementById("no-results");
 
 
-//     // NO RESULTS MESSAGE
+// BOOK SEARCH FUNCTION
 
-//     if (foundBooks === 0) {
+function searchBooks() {
 
-//         noResults.style.display = "block";
+    const searchValue = searchInput.value.toLowerCase().trim();
 
-//     }
-
-//     else {
-
-//         noResults.style.display = "none";
-
-//     }
-
-// }
+    let foundBooks = 0;
 
 
-// // SEARCH BUTTON
+    for (let i = 0; i < bookRows.length; i++) {
 
-// searchForm.addEventListener("submit", function (event) {
-
-//     event.preventDefault();
-
-//     searchBooks();
-
-// });
+        const bookDetails = bookRows[i].textContent.toLowerCase();
 
 
-// // LIVE SEARCH
+        if (bookDetails.includes(searchValue)) {
 
-// searchInput.addEventListener("input", function () {
+            bookRows[i].style.display = "";
 
-//     searchBooks();
+            foundBooks++;
 
-// });
+        }
 
+        else {
+
+            bookRows[i].style.display = "none";
+
+        }
+
+    }
+
+
+    // NO RESULTS MESSAGE
+
+    if (foundBooks === 0) {
+
+        noResults.style.display = "block";
+
+    }
+
+    else {
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+
+// SEARCH BUTTON
 
 searchForm.addEventListener("submit", function (event) {
 
-    console.log(event);
+    event.preventDefault();
+
+    searchBooks();
 
 });
+
+
+// LIVE SEARCH
+
+searchInput.addEventListener("input", function () {
+
+    searchBooks();
+
+});
+
+
