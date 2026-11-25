@@ -47,7 +47,7 @@ function searchBooks() {
 
         else {
 
-            bookRows[i].style.display = "none";
+            bookRows[i].style.display = "";
 
         }
 
