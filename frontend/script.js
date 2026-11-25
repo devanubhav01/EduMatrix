@@ -89,7 +89,7 @@ searchInput.addEventListener("input", function () {
     searchBooks();
 
 });
-
+// READING PLAN ELEMENTS
 const readingPlanForm = document.getElementById("reading-plan-form");
 
 const selectedPlanMessage = document.getElementById(
