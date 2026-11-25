@@ -89,29 +89,29 @@ searchInput.addEventListener("input", function () {
     searchBooks();
 
 });
-// READING PLAN ELEMENTS
-// const readingPlanForm = document.getElementById("reading-plan-form");
+//READING PLAN ELEMENTS
+const readingPlanForm = document.getElementById("reading-plan-form");
 
-// const selectedPlanMessage = document.getElementById(
-//     "selected-plan-message"
-// );
+const selectedPlanMessage = document.getElementById(
+    "selected-plan-message"
+);
 
 
-// // READING PLAN SELECTION
+// READING PLAN SELECTION
 
-// readingPlanForm.addEventListener("change", function () {
+readingPlanForm.addEventListener("change", function () {
 
-//     const selectedPlan = readingPlanForm.querySelector(
-//         'input[name="duration"]:checked'
-//     );
+    const selectedPlan = readingPlanForm.querySelector(
+        'input[name="duration"]:checked'
+    );
 
-//     if (selectedPlan) {
+    if (selectedPlan) {
 
-//         const duration = selectedPlan.value;
+        const duration = selectedPlan.value;
 
-//         selectedPlanMessage.textContent =
-//             `You have selected the ${duration} Days Reading Plan.`;
+        selectedPlanMessage.textContent =
+            `You have selected the ${duration} Days Reading Plan.`;
 
-//     }
+    }
 
-// });
+});
