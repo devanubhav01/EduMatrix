@@ -56,17 +56,17 @@ function searchBooks() {
 
     // NO RESULTS MESSAGE
 
-    if (foundBooks === 0) {
+    // if (foundBooks === 0) {
 
-        noResults.style.display = "block";
+    //     noResults.style.display = "block";
 
-    }
+    // }
 
-    else {
+    // else {
 
-        noResults.style.display = "none";
+    //     noResults.style.display = "none";
 
-    }
+    // }
 
 }
 
