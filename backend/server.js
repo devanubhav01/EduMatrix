@@ -2,11 +2,64 @@
 
 console.log("Welcome to EduMatrix Backend!");
 
+// IMPORT BUILT-IN MODULES
+
+const fs = require("fs");
+
+const path = require("path");
+
+
 // IMPORT CUSTOM MODULE
 
 const books = require("./utils/bookData");
 
 
-// DISPLAY BOOKS
+// CREATE DATA FOLDER PATH
 
-console.log(books);
+const dataFolder = path.join(__dirname, "data");
+
+const booksFile = path.join(dataFolder, "books.json");
+
+
+// CREATE DATA FOLDER
+
+if (!fs.existsSync(dataFolder)) {
+
+    fs.mkdirSync(dataFolder);
+
+}
+
+
+// CREATE JSON FILE
+
+if (!fs.existsSync(booksFile)) {
+
+    fs.writeFileSync(
+        booksFile,
+        JSON.stringify(books, null, 2)
+    );
+
+}
+
+
+// READ JSON FILE
+
+fs.readFile(booksFile, "utf8", function (error, data) {
+
+    if (error) {
+
+        console.log("Error reading books:", error);
+
+        return;
+
+    }
+
+    const storedBooks = JSON.parse(data);
+
+    console.log("EduMatrix Books:");
+
+    console.log(storedBooks);
+
+    console.log("Total Books:", storedBooks.length);
+
+});
