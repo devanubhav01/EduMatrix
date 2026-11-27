@@ -345,3 +345,39 @@ for (let i = 0; i < navigationLinks.length; i++) {
     });
 
 }
+
+// =========================
+// STEP 15
+// LOCAL STORAGE
+// =========================
+
+
+// GET SAVED READING PLAN
+
+const savedPlan = localStorage.getItem("selectedReadingPlan");
+
+
+// RESTORE SAVED READING PLAN
+
+if (savedPlan) {
+
+    const planOptions = readingPlanForm.querySelectorAll(
+        'input[name="duration"]'
+    );
+
+    for (let i = 0; i < planOptions.length; i++) {
+
+        if (planOptions[i].value === savedPlan) {
+
+            planOptions[i].checked = true;
+
+            selectedPlanMessage.textContent =
+                `You have selected the ${savedPlan} Days Reading Plan.`;
+
+            break;
+
+        }
+
+    }
+
+}
