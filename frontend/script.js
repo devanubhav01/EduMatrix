@@ -264,3 +264,30 @@ feedbackForm.addEventListener("submit", function (event) {
     feedbackForm.reset();
 
 });
+
+
+// =========================
+// STEP 13
+// HELP BUTTON POPUP
+// =========================
+
+
+// GET HELP BUTTON
+
+const helpButton = document.querySelector(".help-button");
+
+
+// HANDLE BUTTON CLICK
+
+helpButton.addEventListener("click", function () {
+
+    alert(
+        "Welcome to EduMatrix!\n\n" +
+        "Need help?\n\n" +
+        "1. Browse available books.\n" +
+        "2. Select your reading plan.\n" +
+        "3. Sign up to access our library.\n\n" +
+        "Thank you for using EduMatrix!"
+    );
+
+});
