@@ -71,3 +71,23 @@ fs.readFile(booksFile, "utf8", function (error, data) {
     console.log("Total Books:", storedBooks.length);
 
 });
+
+// CREATE EXPRESS SERVER
+
+const PORT = 3000;
+
+
+app.get("/", function (req, res) {
+
+    res.send("Welcome to EduMatrix Backend Server!");
+
+});
+
+
+// START SERVER
+
+app.listen(PORT, function () {
+
+    console.log(`EduMatrix Server running on port ${PORT}`);
+
+});
