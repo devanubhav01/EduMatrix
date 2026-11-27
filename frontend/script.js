@@ -186,14 +186,14 @@ signupForm.addEventListener("submit", function (event) {
 
     // TERMS VALIDATION
 
-    if (!termsAccepted) {
+    // if (!termsAccepted) {
 
-        signupMessage.textContent =
-            "Please accept Terms and Conditions.";
+    //     signupMessage.textContent =
+    //         "Please accept Terms and Conditions.";
 
-        return;
+    //     return;
 
-    }
+    // }
 
 
     // SUCCESS MESSAGE
