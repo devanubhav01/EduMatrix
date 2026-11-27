@@ -83,6 +83,10 @@ app.get("/", function (req, res) {
 
 });
 
+// JSON MIDDLEWARE
+
+app.use(express.json());
+
 // CUSTOM MIDDLEWARE
 
 app.use(function (req, res, next) {
