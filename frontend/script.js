@@ -291,3 +291,51 @@ helpButton.addEventListener("click", function () {
     );
 
 });
+
+
+// =========================
+// STEP 14
+// SMOOTH NAVIGATION
+// =========================
+
+
+// SELECT NAVIGATION LINKS
+
+const navigationLinks = document.querySelectorAll(
+    "nav a[href^='#']"
+);
+
+
+// HANDLE NAVIGATION CLICK
+
+for (let i = 0; i < navigationLinks.length; i++) {
+
+    navigationLinks[i].addEventListener("click", function (event) {
+
+        const targetId = this.getAttribute("href");
+
+        const targetSection = document.querySelector(targetId);
+
+
+        // CHECK TARGET SECTION
+
+        if (targetSection) {
+
+            event.preventDefault();
+
+
+            // SMOOTH SCROLL
+
+            targetSection.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+        }
+
+    });
+
+}
