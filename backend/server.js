@@ -1,3 +1,12 @@
+// IMPORT DOTENV
+
+require("dotenv").config();
+
+
+// IMPORT DATABASE CONNECTION
+
+const connectDB = require("./config/db");
+
 // EduMatrix Backend
 
 console.log("Welcome to EduMatrix Backend!");
