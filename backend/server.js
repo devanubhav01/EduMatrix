@@ -91,3 +91,14 @@ app.listen(PORT, function () {
     console.log(`EduMatrix Server running on port ${PORT}`);
 
 });
+
+
+// CUSTOM MIDDLEWARE
+
+app.use(function (req, res, next) {
+
+    console.log(`${req.method} ${req.url}`);
+
+    next();
+
+});
