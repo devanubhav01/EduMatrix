@@ -184,7 +184,7 @@ signupForm.addEventListener("submit", function (event) {
     }
 
 
-    TERMS VALIDATION
+  //  TERMS VALIDATION
 
     if (!termsAccepted) {
 
