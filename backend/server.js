@@ -83,6 +83,16 @@ app.get("/", function (req, res) {
 
 });
 
+// CUSTOM MIDDLEWARE
+
+app.use(function (req, res, next) {
+
+    console.log(`${req.method} ${req.url}`);
+
+    next();
+
+});
+
 
 // START SERVER
 
