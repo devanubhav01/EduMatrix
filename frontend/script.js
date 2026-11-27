@@ -110,6 +110,11 @@ readingPlanForm.addEventListener("change", function () {
 
         const duration = selectedPlan.value;
 
+        // SAVE READING PLAN IN LOCAL STORAGE
+
+        localStorage.setItem("selectedReadingPlan", duration);
+
+
         selectedPlanMessage.textContent =
             `You have selected the ${duration} Days Reading Plan.`;
 
