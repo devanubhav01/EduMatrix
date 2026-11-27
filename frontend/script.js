@@ -105,10 +105,7 @@ readingPlanForm.addEventListener("change", function () {
         'input[name="duration"]:checked'
     );
 
-    // SAVE READING PLAN IN LOCAL STORAGE
-
-    localStorage.setItem("selectedReadingPlan", duration);
-
+    
     if (selectedPlan) {
 
         const duration = selectedPlan.value;
