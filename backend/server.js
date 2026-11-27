@@ -107,12 +107,6 @@ app.use(function (req, res, next) {
 });
 
 
-// START SERVER
 
-app.listen(PORT, function () {
-
-    console.log(`EduMatrix Server running on port ${PORT}`);
-
-});
 
 
