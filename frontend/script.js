@@ -146,17 +146,60 @@ signupForm.addEventListener("submit", function (event) {
     const termsAccepted = document.getElementById("terms").checked;
 
 
-    // DISPLAY SIGNUP MESSAGE
+    // NAME VALIDATION
+
+    if (userName.length < 3) {
+
+        signupMessage.textContent =
+            "Name must contain at least 3 characters.";
+
+        return;
+
+    }
+
+
+    // EMAIL VALIDATION
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(userEmail)) {
+
+        signupMessage.textContent =
+            "Please enter a valid email address.";
+
+        return;
+
+    }
+
+
+    // PASSWORD VALIDATION
+
+    if (userPassword.length < 8) {
+
+        signupMessage.textContent =
+            "Password must contain at least 8 characters.";
+
+        return;
+
+    }
+
+
+    // TERMS VALIDATION
+
+    if (!termsAccepted) {
+
+        signupMessage.textContent =
+            "Please accept Terms and Conditions.";
+
+        return;
+
+    }
+
+
+    // SUCCESS MESSAGE
 
     signupMessage.textContent =
-        `Welcome ${userName}! Your signup form has been submitted.`;
-
-
-    console.log("User Name:", userName);
-
-    console.log("User Email:", userEmail);
-
-    console.log("Password entered:", userPassword);
+        `Welcome ${userName}! Your signup form has been submitted successfully.`;
 
 
     // RESET FORM
