@@ -2,6 +2,7 @@
 
 console.log("Welcome to EduMatrix Backend!");
 
+const express = require("express");
 
 // IMPORT BUILT-IN MODULES
 
