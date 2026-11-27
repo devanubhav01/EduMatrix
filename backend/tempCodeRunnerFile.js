@@ -1,1 +1,0 @@
-JSON.stringify(books, null, 2)
