@@ -107,6 +107,33 @@ app.use(function (req, res, next) {
 });
 
 
+// START SERVER AFTER DATABASE CONNECTION
 
+async function startServer() {
+
+    try {
+
+        await connectDB();
+
+        app.listen(PORT, function () {
+
+            console.log(`EduMatrix Server running on port ${PORT}`);
+
+        });
+
+    }
+
+    catch (error) {
+
+        console.log("Server could not start!");
+
+        process.exit(1);
+
+    }
+
+}
+
+
+startServer();
 
 
