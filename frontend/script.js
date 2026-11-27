@@ -207,3 +207,60 @@ signupForm.addEventListener("submit", function (event) {
     signupForm.reset();
 
 });
+
+// =========================
+// STEP 12
+// FEEDBACK SUBMISSION
+// =========================
+
+
+// GET HTML ELEMENTS
+
+const feedbackForm = document.querySelector(
+    ".feedback-section form"
+);
+
+const feedbackInput = document.getElementById("feedback");
+
+const feedbackMessage = document.getElementById("feedback-message");
+
+
+// HANDLE FORM SUBMISSION
+
+feedbackForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+
+    // GET USER FEEDBACK
+
+    const userFeedback = feedbackInput.value.trim();
+
+
+    // EMPTY FEEDBACK VALIDATION
+
+    if (userFeedback === "") {
+
+        feedbackMessage.textContent =
+            "Please enter your feedback.";
+
+        feedbackMessage.style.color = "red";
+
+        return;
+
+    }
+
+
+    // SUCCESS MESSAGE
+
+    feedbackMessage.textContent =
+        "Thank you! Your feedback has been submitted successfully.";
+
+    feedbackMessage.style.color = "green";
+
+
+    // RESET FORM
+
+    feedbackForm.reset();
+
+});
