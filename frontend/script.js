@@ -143,7 +143,7 @@ signupForm.addEventListener("submit", function (event) {
 
     const userPassword = document.getElementById("password").value;
 
-    const terms = document.getElementById("terms").checked;
+    const termsAccepted = document.getElementById("terms").checked;
 
 
     // NAME VALIDATION
