@@ -6,6 +6,10 @@ console.log("Welcome to EduMatrix Backend!");
 
 const express = require("express");
 
+// CREATE EXPRESS APPLICATION
+
+const app = express();
+
 // IMPORT BUILT-IN MODULES
 
 const fs = require("fs");
