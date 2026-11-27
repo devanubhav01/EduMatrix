@@ -186,7 +186,7 @@ signupForm.addEventListener("submit", function (event) {
 
   //  TERMS VALIDATION
 
-    if (!terms) {
+    if (!termsAccepted) {
 
         signupMessage.textContent =
             "Please accept Terms and Conditions.";
