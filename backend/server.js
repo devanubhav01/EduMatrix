@@ -11,9 +11,7 @@ const connectDB = require("./config/db");
 
 console.log("Welcome to EduMatrix Backend!");
 
-// IMPORT EXPRESS
 
-const express = require("express");
 
 // CREATE EXPRESS APPLICATION
 
