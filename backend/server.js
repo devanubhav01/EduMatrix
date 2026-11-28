@@ -107,10 +107,6 @@ app.get("/", function (req, res) {
 });
 
 
-
-
-
-
 // START SERVER AFTER DATABASE CONNECTION
 
 async function startServer() {
