@@ -40,7 +40,6 @@ console.log("Welcome to EduMatrix Backend!");
 
 // IMPORT CUSTOM MODULE
 
-const books = require("./utils/bookData");
 
 
 // CREATE DATA FOLDER PATH
