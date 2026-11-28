@@ -156,11 +156,11 @@ router.get("/:id", async function (req, res) {
     }
     catch (error) {
 
-        res.status(500).json({
-            success: false,
-            message: "Error fetching book",
-            error: error.message
-        });
+        handleMongooseError(
+            error,
+            res,
+            "Error fetching book"
+        );
 
     }
 
