@@ -25,7 +25,7 @@ const path = require("path");
 
 // IMPORT CUSTOM MODULE
 
-const connectDB = require("./config/db");
+
 
 const books = require("./utils/bookData");
 
