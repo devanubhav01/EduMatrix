@@ -98,6 +98,11 @@ app.use(function (req, res, next) {
 
 });
 
+
+// CONNECT BOOK ROUTES
+
+app.use("/api/books", bookRoutes);
+
 // HOME ROUTE
 
 app.get("/", function (req, res) {
