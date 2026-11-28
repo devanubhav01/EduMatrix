@@ -117,6 +117,16 @@ app.get("/", function (req, res) {
 
 });
 
+// HANDLE INVALID API ROUTES
+
+app.use(function (req, res) {
+
+    res.status(404).json({
+        success: false,
+        message: "API route not found"
+    });
+
+});
 
 // START SERVER AFTER DATABASE CONNECTION
 
