@@ -88,16 +88,6 @@ const PORT = 3000;
 
 app.use(express.json());
 
-
-
-app.get("/", function (req, res) {
-
-    res.send("Welcome to EduMatrix Backend Server!");
-
-});
-
-
-
 // CUSTOM MIDDLEWARE
 
 app.use(function (req, res, next) {
@@ -107,6 +97,16 @@ app.use(function (req, res, next) {
     next();
 
 });
+
+app.get("/", function (req, res) {
+
+    res.send("Welcome to EduMatrix Backend Server!");
+
+});
+
+
+
+
 
 
 // START SERVER AFTER DATABASE CONNECTION
