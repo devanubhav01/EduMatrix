@@ -422,15 +422,16 @@ router.put("/:id", async function (req, res) {
 
     catch (error) {
 
-        res.status(500).json({
+        handleMongooseError(
 
-            success: false,
+            error,
 
-            message: "Error updating book",
+            res,
 
-            error: error.message
+            "Error updating book"
 
-        });
+        );
+
 
     }
 
