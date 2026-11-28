@@ -56,6 +56,57 @@ router.get("/", async function (req, res) {
 
 });
 
+// GET SINGLE BOOK BY ID
+
+router.get("/:id", async function (req, res) {
+
+    try {
+
+        // GET BOOK ID FROM URL
+        const bookId = req.params.id;
+
+        // VALIDATE BOOK ID
+        if (!mongoose.Types.ObjectId.isValid(bookId)) {
+
+            return res.status(400).json({
+                success: false,
+                message: "Invalid Book ID"
+            });
+
+        }
+
+        // FIND BOOK BY ID
+        const book = await Book.findById(bookId);
+
+        // CHECK IF BOOK EXISTS
+        if (!book) {
+
+            return res.status(404).json({
+                success: false,
+                message: "Book not found"
+            });
+
+        }
+
+        // SEND BOOK DETAILS
+        res.status(200).json({
+            success: true,
+            book: book
+        });
+
+    }
+    catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: "Error fetching book",
+            error: error.message
+        });
+
+    }
+
+});
+
 
 // ADD NEW BOOK TO DATABASE
 
