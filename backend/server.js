@@ -6,12 +6,9 @@ console.log("Welcome to EduMatrix Backend!");
 
 
 
-const dotenv = require("dotenv");
 
-const path = require("path");
-
-dotenv.config({
-    path: path.join(__dirname, ".env")
+require("dotenv").config({
+    path: require("path").join(__dirname, ".env")
 });
 
 console.log("MongoDB URI Loaded:", !!process.env.MONGODB_URI);
