@@ -84,6 +84,10 @@ fs.readFile(booksFile, "utf8", function (error, data) {
 
 const PORT = 3000;
 
+// JSON MIDDLEWARE
+
+app.use(express.json());
+
 
 app.get("/", function (req, res) {
 
