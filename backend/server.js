@@ -8,6 +8,8 @@ require("dotenv").config();
 
 console.log("MongoDB URI Loaded:", !!process.env.MONGODB_URI);
 
+const connectDB = require("./config/db");
+
 // IMPORT EXPRESS
 
 const express = require("express");
