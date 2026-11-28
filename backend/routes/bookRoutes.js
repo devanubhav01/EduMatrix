@@ -55,6 +55,47 @@ router.get("/", async function (req, res) {
 });
 
 
-// EXPORT ROUTER
+// ADD NEW BOOK TO DATABASE
 
+router.post("/", async function (req, res) {
+
+    try {
+
+        // GET BOOK DETAILS FROM REQUEST BODY
+        const { title, author, price, category, duration } = req.body;
+
+        // CREATE NEW BOOK
+        const newBook = new Book({
+            title,
+            author,
+            price,
+            category,
+            duration
+        });
+
+        // SAVE BOOK TO DATABASE
+        const savedBook = await newBook.save();
+
+        // SEND RESPONSE
+        res.status(201).json({
+            success: true,
+            message: "Book added successfully!",
+            book: savedBook
+        });
+
+    }
+    catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: "Error adding book",
+            error: error.message
+        });
+
+    }
+
+});
+
+
+// EXPORT ROUTER
 module.exports = router;
