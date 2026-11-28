@@ -14,7 +14,69 @@ const router = express.Router();
 
 const Book = require("../models/Book");
 
+// HANDLE API ERRORS
 
+function handleMongooseError(error, res, operation) {
+
+    // LOG ERROR FOR DEVELOPER
+
+    console.error(error);
+
+
+    // HANDLE VALIDATION ERROR
+
+    if (error.name === "ValidationError") {
+
+        const errors = Object.values(error.errors).map(function (err) {
+
+            return {
+                field: err.path,
+                message: err.message
+            };
+
+        });
+
+        return res.status(400).json({
+
+            success: false,
+
+            message: "Validation failed",
+
+            errors: errors
+
+        });
+
+    }
+
+
+    // HANDLE CAST ERROR
+
+    if (error.name === "CastError") {
+
+        return res.status(400).json({
+
+            success: false,
+
+            message: "Invalid data format",
+
+            field: error.path
+
+        });
+
+    }
+
+
+    // HANDLE UNEXPECTED SERVER ERRORS
+
+    return res.status(500).json({
+
+        success: false,
+
+        message: operation
+
+    });
+
+}
 
 // GET ALL BOOKS FROM DATABASE
 
