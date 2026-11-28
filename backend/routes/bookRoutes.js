@@ -105,15 +105,11 @@ router.get("/", async function (req, res) {
 
     catch (error) {
 
-        res.status(500).json({
-
-            success: false,
-
-            message: "Error fetching books",
-
-            error: error.message
-
-        });
+        handleMongooseError(
+            error,
+            res,
+            "Error fetching books"
+        );
 
     }
 
