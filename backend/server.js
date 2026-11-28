@@ -27,7 +27,7 @@ const connectDB = require("./config/db");
 
 const books = require("./utils/bookData");
 
-//const bookRoutes = require("./routes/bookRoutes");
+const bookRoutes = require("./routes/bookRoutes");
 
 
 // CREATE DATA FOLDER PATH
