@@ -30,19 +30,6 @@ const books = require("./utils/bookData");
 //const bookRoutes = require("./routes/bookRoutes");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // CREATE DATA FOLDER PATH
 
 const dataFolder = path.join(__dirname, "data");
