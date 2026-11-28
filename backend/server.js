@@ -2,6 +2,9 @@
 
 require("dotenv").config();
 
+// IMPORT EXPRESS
+
+const express = require("express");
 
 // IMPORT DATABASE CONNECTION
 
