@@ -257,6 +257,81 @@ router.put("/:id", async function (req, res) {
 
 });
 
+// DELETE BOOK FROM DATABASE
+
+router.delete("/:id", async function (req, res) {
+
+    try {
+
+        // GET BOOK ID FROM URL
+
+        const bookId = req.params.id;
+
+
+        // VALIDATE BOOK ID
+
+        if (!mongoose.Types.ObjectId.isValid(bookId)) {
+
+            return res.status(400).json({
+
+                success: false,
+
+                message: "Invalid Book ID"
+
+            });
+
+        }
+
+
+        // DELETE BOOK FROM DATABASE
+
+        const deletedBook = await Book.findByIdAndDelete(bookId);
+
+
+        // CHECK IF BOOK EXISTS
+
+        if (!deletedBook) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Book not found"
+
+            });
+
+        }
+
+
+        // SEND RESPONSE
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Book deleted successfully!",
+
+            book: deletedBook
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: "Error deleting book",
+
+            error: error.message
+
+        });
+
+    }
+
+});
 
 // EXPORT ROUTER
 
