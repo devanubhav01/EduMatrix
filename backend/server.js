@@ -1,3 +1,7 @@
+// EduMatrix Backend
+
+console.log("Welcome to EduMatrix Backend!");
+
 // IMPORT DOTENV
 
 require("dotenv").config();
