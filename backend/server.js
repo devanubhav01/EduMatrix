@@ -80,7 +80,7 @@ fs.readFile(booksFile, "utf8", function (error, data) {
 
 });
 
-// CREATE EXPRESS SERVER
+// SERVER CONFIGURATION
 
 const PORT = 3000;
 
