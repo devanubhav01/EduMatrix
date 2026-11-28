@@ -88,7 +88,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// CUSTOM MIDDLEWARE
+
 
 app.get("/", function (req, res) {
 
