@@ -110,6 +110,121 @@ router.get("/:id", async function (req, res) {
 
 // ADD NEW BOOK TO DATABASE
 
+router.post("/", async function (req, res) {
+
+    try {
+
+        // CHECK WHETHER REQUEST BODY IS VALID
+
+        if (
+            !req.body ||
+            typeof req.body !== "object" ||
+            Array.isArray(req.body)
+        ) {
+
+            return res.status(400).json({
+                success: false,
+                message: "Invalid request body"
+            });
+
+        }
+
+
+        // GET BOOK DETAILS FROM REQUEST BODY
+
+        const { title, author, price, category, duration } = req.body;
+
+
+        // CHECK REQUIRED FIELDS
+
+        const requiredFields = [
+            "title",
+            "author",
+            "price",
+            "category",
+            "duration"
+        ];
+
+
+        // FIND MISSING FIELDS
+
+        const missingFields = requiredFields.filter(function (field) {
+
+            return (
+                req.body[field] === undefined ||
+                req.body[field] === null ||
+                (
+                    typeof req.body[field] === "string" &&
+                    req.body[field].trim() === ""
+                )
+            );
+
+        });
+
+
+        // RETURN ERROR IF REQUIRED FIELDS ARE MISSING
+
+        if (missingFields.length > 0) {
+
+            return res.status(400).json({
+
+                success: false,
+
+                message: "Required fields are missing",
+
+                missingFields: missingFields
+
+            });
+
+        }
+
+
+        // CREATE NEW BOOK
+
+        const newBook = new Book({
+            title,
+            author,
+            price,
+            category,
+            duration
+        });
+
+
+        // SAVE BOOK TO DATABASE
+
+        const savedBook = await newBook.save();
+
+
+        // SEND RESPONSE
+
+        res.status(201).json({
+
+            success: true,
+
+            message: "Book added successfully!",
+
+            book: savedBook
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: "Error adding book",
+
+            error: error.message
+
+        });
+
+    }
+
+});
+
 
 
 
