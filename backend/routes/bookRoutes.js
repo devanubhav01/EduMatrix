@@ -314,13 +314,9 @@ router.post("/", async function (req, res) {
     catch (error) {
 
         handleMongooseError(
-
             error,
-
             res,
-
             "Error adding book"
-
         );
 
     }
