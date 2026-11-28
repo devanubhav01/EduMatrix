@@ -8,24 +8,49 @@ const express = require("express");
 const router = express.Router();
 
 
-// IMPORT BOOK DATA
+// IMPORT BOOK MODEL
 
-const books = require("../utils/bookData");
+const Book = require("../models/Book");
 
 
-// GET ALL BOOKS
+// GET ALL BOOKS FROM DATABASE
 
-router.get("/", function (req, res) {
+router.get("/", async function (req, res) {
 
-    res.status(200).json({
+    try {
 
-        success: true,
+        // FETCH ALL BOOKS
 
-        totalBooks: books.length,
+        const books = await Book.find();
 
-        books: books
 
-    });
+        // SEND RESPONSE
+
+        res.status(200).json({
+
+            success: true,
+
+            totalBooks: books.length,
+
+            books: books
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: "Error fetching books",
+
+            error: error.message
+
+        });
+
+    }
 
 });
 
