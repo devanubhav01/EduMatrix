@@ -98,6 +98,8 @@ app.use(function (req, res, next) {
 
 });
 
+// HOME ROUTE
+
 app.get("/", function (req, res) {
 
     res.send("Welcome to EduMatrix Backend Server!");
