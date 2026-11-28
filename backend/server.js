@@ -30,9 +30,7 @@ const connectDB = require("./config/db");
 const books = require("./utils/bookData");
 
 
-// EduMatrix Backend
 
-console.log("Welcome to EduMatrix Backend!");
 
 
 
