@@ -2,6 +2,8 @@
 
 const express = require("express");
 
+// IMPORT MONGOOSE
+const mongoose = require("mongoose");
 
 // CREATE ROUTER
 
