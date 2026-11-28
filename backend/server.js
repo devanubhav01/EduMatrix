@@ -6,6 +6,10 @@ require("dotenv").config();
 
 const express = require("express");
 
+// CREATE EXPRESS APPLICATION
+
+const app = express();
+
 // IMPORT DATABASE CONNECTION
 
 const connectDB = require("./config/db");
