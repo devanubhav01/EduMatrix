@@ -23,7 +23,7 @@ const path = require("path");
 
 
 
-// IMPORT DATABASE CONNECTION
+// IMPORT CUSTOM MODULE
 
 const connectDB = require("./config/db");
 
