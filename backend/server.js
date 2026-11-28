@@ -4,7 +4,7 @@ console.log("Welcome to EduMatrix Backend!");
 
 // IMPORT DOTENV
 
-require("dotenv").config();
+
 
 const dotenv = require("dotenv");
 
