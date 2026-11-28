@@ -489,15 +489,11 @@ router.delete("/:id", async function (req, res) {
 
     catch (error) {
 
-        res.status(500).json({
-
-            success: false,
-
-            message: "Error deleting book",
-
-            error: error.message
-
-        });
+        handleMongooseError(
+            error,
+            res,
+            "Error deleting book"
+        );
 
     }
 
